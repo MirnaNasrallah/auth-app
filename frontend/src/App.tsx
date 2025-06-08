@@ -1,3 +1,4 @@
+// Main app entry. Handles routing and authentication protection.
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import SignUp from './pages/SignUp';

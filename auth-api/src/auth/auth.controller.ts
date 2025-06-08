@@ -1,3 +1,4 @@
+// Contains authentication endpoints for sign up, sign in, refresh, and profile.
 import { Body, Controller, Post, Get, UseGuards, Req } from '@nestjs/common';
 import { AuthService } from './auth.service';
 import { SignupDto } from './dto/signup.dto';

@@ -1,3 +1,4 @@
+// Sign-up page for new user registration.
 import React, { useState } from 'react';
 import { TextField, Button, Box, Typography, Alert } from '@mui/material';
 import { useNavigate } from 'react-router-dom';

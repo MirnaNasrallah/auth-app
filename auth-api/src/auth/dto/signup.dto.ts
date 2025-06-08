@@ -1,3 +1,4 @@
+// DTO for user signup with validation rules.
 import { IsEmail, IsNotEmpty, IsString, MinLength, Matches } from 'class-validator';
 export class SignupDto {
   @IsString()

@@ -1,13 +1,16 @@
 # Auth App
 
-Full-stack authentication application built with NestJS (backend) and React + TypeScript (frontend).
+A modern full-stack authentication app using NestJS (backend) and React + TypeScript (frontend).
+
+## What is this?
+This project is a production-ready authentication system. It lets users sign up, sign in, and access protected content. The backend is built with NestJS and MongoDB, and the frontend is a beautiful React app using Material-UI.
 
 ## Tech Stack
 
 * **Backend:** NestJS, MongoDB, Mongoose, JWT, class-validator, Swagger (OpenAPI)
 * **Frontend:** React 18, TypeScript, Material-UI, Axios, React-Router.
 
-## Requirements Implemented
+## Features
 
 ### Backend
 1. Sign-up (`POST /auth/signup`) and sign-in (`POST /auth/signin`) endpoints.
@@ -32,8 +35,12 @@ Full-stack authentication application built with NestJS (backend) and React + Ty
 Create `auth-api/.env` with:
 ```env
 MONGO_URI=mongodb://localhost:27017/auth-app
-JWT_SECRET=<random_32_char_secret>
-JWT_REFRESH_SECRET=<another_random_secret>
+JWT_SECRET=<your_jwt_secret>
+JWT_REFRESH_SECRET=<your_refresh_secret>
+```
+To generate a strong JWT secret, run:
+```bash
+openssl rand -base64 32
 ```
 
 ### Installation
@@ -43,19 +50,33 @@ npm install --prefix auth-api
 npm install --prefix frontend
 ```
 
-### Running in Development
-```bash
-# Terminal 1 – Backend
-cd auth-api
-npm run start:dev
-
-# Terminal 2 – Frontend
-cd frontend
-PORT=3001 npm start
-```
+### Running the App
+- **Backend:**
+  ```bash
+  cd auth-api
+  npm run start:dev
+  ```
+- **Frontend:**
+  ```bash
+  cd frontend
+  PORT=3001 npm start
+  ```
 
 ### API Documentation
-Open `http://localhost:3000/api` after the backend is running to explore the Swagger UI.
+Visit [http://localhost:3000/api](http://localhost:3000/api) for Swagger UI.
+
+## Project Structure
+- `auth-api/` — NestJS backend
+- `frontend/` — React frontend
+
+## Notes
+- Passwords are hashed and validated for security.
+- All sensitive config is in `.env` (never commit secrets!).
+- Logging is enabled for easier debugging and monitoring.
+
+---
+
+Enjoy building with this starter! If you have questions or want to extend it, just fork and hack away.
 
 ## Deployment
 The app is production-ready: environment configuration, DTO validation, CORS, logging, and API docs are in place. 

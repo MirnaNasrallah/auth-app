@@ -1,3 +1,4 @@
+// Protected application page. Fetches user profile and handles logout.
 import React, { useEffect, useState } from 'react';
 import { Box, Typography, Button, CircularProgress, Alert } from '@mui/material';
 import { useNavigate } from 'react-router-dom';

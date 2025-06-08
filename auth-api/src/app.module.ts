@@ -1,3 +1,4 @@
+// Main entry point for the backend application. Loads config, database, and authentication modules.
 import { Module } from '@nestjs/common';
 import { ConfigModule } from '@nestjs/config';
 import { MongooseModule } from '@nestjs/mongoose';

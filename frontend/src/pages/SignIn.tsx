@@ -1,3 +1,4 @@
+// Sign-in page for user authentication.
 import React, { useState } from 'react';
 import { TextField, Button, Box, Typography, Alert } from '@mui/material';
 import { useNavigate } from 'react-router-dom';
